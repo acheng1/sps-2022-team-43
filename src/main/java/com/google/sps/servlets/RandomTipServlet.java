@@ -25,6 +25,7 @@ public class RandomTipServlet extends HttpServlet {
     tips.add("Reframe your thoughts");
     tips.add("Learn from your team members");
     tips.add("Toot your own horn");
+    tips.add("hello");
     Gson gson = new Gson(); 
     String json = gson.toJson(tips); 
     
