@@ -1,0 +1,16 @@
+.content-section {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.background {
+    background-repeat: no-repeat;
+    width: 500;
+    height: 600;
+    justify-content: left;
+}
