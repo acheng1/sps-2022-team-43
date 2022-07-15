@@ -1,27 +1,26 @@
 .content-section {
-    font-family: 'Lucida Sans';
     align-items: center;
     display: flex;
+    font-family: 'Lucida Sans';
     flex-direction: column;
-    text-align: center;
     justify-content: center;
+    text-align: center;
     width: 100%;
-}
-
-.background {
     background-repeat: no-repeat;
-    width: 500;
-    height: 600;
-    justify-content: left;
+    background-image: url("/images/impostor9.jpg");
+    background-position: 10% center;
+    background-size: 40%;
 }
 
 textarea {
+    border-style: none;
+    border-radius: 13px;
     background-color: gainsboro;
+    opacity: .5;
+    font-family: 'Lucida Sans';
+    text-align: center; 
+    line-height:30px;
+    height: 150px;
     resize: none;
     width: 300px;
-    height: 150px;
-    font-family: 'Lucida Sans';
-    width: 400px;
-    border-style: none;
-    border-radius: 10px;
 }
