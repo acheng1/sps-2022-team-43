@@ -1,0 +1,31 @@
+.content-section {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+  }
+  
+
+.container {
+	height: 40%;
+    width: 58%;
+	border: 1px solid white;
+}
+
+.container1 {
+    height: 40%;
+    width: 58%;
+	background-color: rgb(243, 241, 235);
+	text-align: center;
+    border-radius: 12px;
+}
+
+.center {
+    margin: 0;
+    position: absolute;
+    top: 30%;
+    left: 72%;
+    -ms-transform: translate(-30%, -72%);
+    transform: translate(-30%, -72%);
+  }
