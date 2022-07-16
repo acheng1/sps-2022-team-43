@@ -1,10 +1,11 @@
+<!-- Rishith Working On this -->
 <!DOCTYPE html>
 <html>
   <head>
     <!-- Quick test -->
     <meta charset="UTF-8">
     <title>Impostor Syndrome App</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./css/index.css">
     <script src="index.js"></script>
 
     <!-- Bootstrap pluggins for css and js -->
@@ -18,25 +19,25 @@
       integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" 
       crossorigin="anonymous">
     </script>
+
   </head>
-  <body>
-      <div class="content-section">
-        <div class="middle-section">
-          <div id="random-tip"></div>
-          <br/>
-          <div id="button-container">
-              <button onclick="getRandomTip();">Tip of the day</button>
+  <body style="background-color:#191970;">
+        <div class="row">
+          <div
+            class="row align-items-center"
+            style="min-height: 100vh">
+            <!-- Alligns the rows to the center of the viewable screen -->
+                
+            <div class="col-lg-6 text-center" style="background-color:aliceblue;" >
+                <h2>Testing if this works</h2>
+            </div>
+
+            <div class="col-lg-6">
+                <img src="images/workImage.png" class="classPic" alt=”img” id="img1" />
+            </div>
+
           </div>
-          <br/>
         </div>
-        <div class="middle-section">
-            <form action="/sentiment" method="POST">
-                <h1>Reflect on your journey</h1>
-                <textarea name="text-input" placeholder="What have you thought about yourself today?"></textarea>
-                <h6>“It doesn't matter how slowly you go, as long as you don't stop”<h6>
-                <input type="submit" />
-            </form>
-        </div>
-    </div>
+
   </body>
 </html>
