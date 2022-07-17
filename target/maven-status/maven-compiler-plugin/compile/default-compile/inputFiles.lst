@@ -1,4 +1,4 @@
-/home/mdeleongomez/sps-2022-team-43/src/main/java/com/google/sps/servlets/RandomTipServlet.java
-/home/mdeleongomez/sps-2022-team-43/src/main/java/com/google/sps/ServerMain.java
-/home/mdeleongomez/sps-2022-team-43/src/main/java/com/google/sps/servlets/SentimentServlet.java
-/home/mdeleongomez/sps-2022-team-43/src/main/java/com/google/sps/servlets/FormHandlerServlet.java
+/home/zchen/sps-2022-team-43/src/main/java/com/google/sps/ServerMain.java
+/home/zchen/sps-2022-team-43/src/main/java/com/google/sps/servlets/RandomTipServlet.java
+/home/zchen/sps-2022-team-43/src/main/java/com/google/sps/servlets/SentimentServlet.java
+/home/zchen/sps-2022-team-43/src/main/java/com/google/sps/servlets/FormHandlerServlet.java
