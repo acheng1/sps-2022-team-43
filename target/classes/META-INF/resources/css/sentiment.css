@@ -1,7 +1,8 @@
 .content-section {
     align-items: center;
     display: flex;
-    font-family: 'Lucida Sans';
+    font-family: 'Inter', sans-serif;
+    font-size:3vw;
     flex-direction: column;
     justify-content: center;
     text-align: center;
@@ -17,10 +18,25 @@ textarea {
     border-radius: 13px;
     background-color: gainsboro;
     opacity: .5;
-    font-family: 'Lucida Sans';
+    font-family: 'Inter', sans-serif;
     text-align: center; 
     line-height:30px;
-    height: 150px;
+    height: 250px;
     resize: none;
-    width: 300px;
+    width: 400px;
+}
+
+#api {
+    background-color: #f1efea; 
+    border: none;
+    border-radius: 12px;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 20px;
+    font-family: 'Inter', sans-serif;
+    position: fixed;
+    bottom: 0;
+    right: 0;
 }
