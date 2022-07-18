@@ -1,0 +1,122 @@
+<!-- Zhe is working on this -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Quick test -->
+    <meta charset="UTF-8">
+    <title>Tips for Imposter Syndrome</title>
+    <link rel="stylesheet" href="./css/tipOfTheDay.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100&display=swap" rel="stylesheet">
+    <script src="tipOfTheDay.js"></script>
+
+    <!-- Bootstrap pluggins for css and js -->
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous">
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" 
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" 
+      crossorigin="anonymous">
+    </script>
+    <style> 
+        #leftbox {
+            float:left; 
+            width:50%;
+            height:280px;
+        }
+        #rightbox{
+            float:right;
+            width:50%;
+            height:280px;
+        }
+        #right{
+            float:right;
+            width:5%;
+            height:280px;
+        }
+        #foo {
+            position: fixed;
+            bottom: 0;
+            right: 0;
+        }
+        #next {
+            background-color: #f1efea; 
+            border: none;
+            border-radius: 12px;
+            color: black;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 20px;
+            font-family: 'Inter', sans-serif;
+        }
+        #tip {
+            background-color: #f1efea; 
+            border: none;
+            border-radius: 12px;
+            color: black;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-family: 'Inter', sans-serif;
+            font-size: 30px;
+        }
+        #random-tip{
+            font-family: 'Inter', sans-serif;
+            font-size: 22px;
+            text-align: center;
+        }
+        h1{
+            color:black;
+            font-size:7vw;
+            font-family: 'Inter', sans-serif;
+            text-align:center;
+        }
+    </style> 
+  </head>
+  <body>
+    <div id = "boxes">
+        <h1>Tip of the Day</h1>
+        <div id = "leftbox">
+            <img src="/images/impostor1.png"
+                width="800"
+                height="700" />
+        </div> 
+        <div id = "rightbox">
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <div class="center">
+                <br/>
+                <br/>
+                <br/>
+                <button id="tip", onclick="getRandomTip();">Get A Tip!</button>
+            </div>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <div id="random-tip"></div>
+        </div>
+        <div id = "right">
+        </div> 
+        <div id="foo">
+            <a href="sps-2022-team-43/src/main/webapp/sentiment.html">  
+                <button id="next">Next</button>  
+            </a> 
+        </div>    
+    </div>
+  </body>
+</html>

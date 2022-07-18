@@ -1,0 +1,26 @@
+.content-section {
+    align-items: center;
+    display: flex;
+    font-family: 'Lucida Sans';
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-image: url("/images/impostor9.jpg");
+    background-position: 10% center;
+    background-size: 40%;
+}
+
+textarea {
+    border-style: none;
+    border-radius: 13px;
+    background-color: gainsboro;
+    opacity: .5;
+    font-family: 'Lucida Sans';
+    text-align: center; 
+    line-height:30px;
+    height: 150px;
+    resize: none;
+    width: 300px;
+}
