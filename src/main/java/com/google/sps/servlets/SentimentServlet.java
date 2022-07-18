@@ -17,6 +17,11 @@ package com.google.sps.servlets;
 import com.google.cloud.language.v1.Document;
 import com.google.cloud.language.v1.LanguageServiceClient;
 import com.google.cloud.language.v1.Sentiment;
+import com.google.cloud.datastore.Datastore;
+import com.google.cloud.datastore.DatastoreOptions;
+import com.google.cloud.datastore.Entity;
+import com.google.cloud.datastore.FullEntity;
+import com.google.cloud.datastore.KeyFactory;
 import java.io.IOException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -38,6 +43,11 @@ public class SentimentServlet extends HttpServlet {
     float score = sentiment.getScore();
     languageService.close();
 
+    Datastore datastore = DatastoreOptions.getDefaultInstance().getService();
+    KeyFactory keyFactory = datastore.newKeyFactory().setKind("Score");
+    FullEntity taskEntity = Entity.newBuilder(keyFactory.newKey()).set("Sentiment Score", score).build();
+    datastore.put(taskEntity);
+    
     String quote;
 
     if (score < -0.5) {

@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <script src="tipOfTheDay.js"></script>
 
     <!-- Bootstrap pluggins for css and js -->
@@ -23,20 +24,11 @@
       crossorigin="anonymous">
     </script>
     <style> 
-        #leftbox {
-            float:left; 
-            width:50%;
-            height:280px;
-        }
-        #rightbox{
-            float:right;
-            width:50%;
-            height:280px;
-        }
-        #right{
-            float:right;
-            width:5%;
-            height:280px;
+        #centerbox{
+            background-repeat: no-repeat;
+            background-image: url("/images/bg2.png");
+            background-position: center;
+            background-size: cover;
         }
         #foo {
             position: fixed;
@@ -58,63 +50,67 @@
         #tip {
             background-color: #f1efea; 
             border: none;
+            text-align: center;
+            
             border-radius: 12px;
             color: black;
             padding: 15px 32px;
-            text-align: center;
             text-decoration: none;
             display: inline-block;
             font-family: 'Inter', sans-serif;
-            font-size: 30px;
+            font-size: 20px;
         }
         #random-tip{
             font-family: 'Inter', sans-serif;
             font-size: 22px;
             text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+            width: 650px;
         }
         h1{
             color:black;
-            font-size:7vw;
+            font-weight:bold;
+            font-size:6vw;
             font-family: 'Inter', sans-serif;
             text-align:center;
+        }
+        body {
+            /* Image Location */
+            background-image: url("/images/bg2.png");
+            /* Background image is centered vertically and horizontally at all times */
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            background-color: #ffffff;
+            /* Font Colour */
+            color:rgb(0, 0, 0);
         }
     </style> 
   </head>
   <body>
-    <div id = "boxes">
-        <h1>Tip of the Day</h1>
-        <div id = "leftbox">
-            <img src="/images/impostor1.jpg" width="600"/>
-        </div> 
-        <div id = "rightbox">
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <div class="center">
-                <br/>
-                <br/>
-                <br/>
-                <button id="tip", onclick="getRandomTip();">Get A Tip!</button>
-            </div>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <div id="random-tip"></div>
+    <br/>
+    <br/>
+    <br/>
+    <h1>Tip of the Day</h1>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <div class="row">
+        <div class="col text-center">
+            <button id="tip", onclick="getRandomTip();">Get A Tip!</button>
         </div>
-        <div id = "right">
-        </div> 
-        <div id="foo">
-            <a href="/sentiment.html">  
-                <button id="next">Next</button>  
-            </a> 
-        </div>    
     </div>
+    <br/>
+    <br/>
+    <br/>
+    <div id="random-tip"></div>
+    <div id="foo">
+        <a href="/sentiment.html">  
+            <button id="next">Next</button>  
+        </a> 
+    </div>  
   </body>
 </html>
