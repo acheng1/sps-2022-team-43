@@ -8,6 +8,7 @@
   <version>1</version>
 
   <properties>
+  
     <!-- Java 11 -->
     <maven.compiler.source>11</maven.compiler.source>
     <maven.compiler.target>11</maven.compiler.target>
@@ -18,6 +19,7 @@
     <exec.mainClass>com.google.sps.ServerMain</exec.mainClass>
     <googleCloudProjectId>summer22-sps-43</googleCloudProjectId>
   </properties>
+
 
   <dependencies>
 
