@@ -4,13 +4,11 @@
     font-family: 'Inter', sans-serif;
     font-size:3vw;
     flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    width: 100%;
     background-repeat: no-repeat;
     background-image: url("/images/impostor9.jpg");
     background-position: 10% center;
     background-size: 40%;
+    margin: 1px;
 }
 
 textarea {
@@ -43,12 +41,9 @@ textarea {
 
 #calendar-container {
     display: flex;
-    align-items: center;
     align-content: center;
-    width: 95%;
-    height: 80vh;
-    padding: 10px;
-    margin: 10px;
+    width: 100%;
+    height: 70vh;
     background-repeat: no-repeat;
     background-image: url("/images/ombre.jpg");
     background-position: center;
@@ -94,11 +89,11 @@ textarea {
 }
 
 .calendar-day-average {
-    background-color: rgb(129, 153, 185);
+    background-color: rgb(168, 88, 192);
 }
 
 .calendar-day-bad {
-    background-color: rgb(226, 232, 236);
+    background-color: rgb(212, 176, 206);
 }
 
 .motivational-quote {

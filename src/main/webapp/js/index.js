@@ -34,7 +34,10 @@ function renderCalendar(calendarData) {
         const date = new Date(new Date().getYear(), month, 0);
         const monthName = date.toLocaleString('en-US', { month: 'short' });
         const daysInMonth = date.getDate();
+
         monthContainerTitle.innerText = monthName;
+        monthContainer.appendChild(monthContainerTitle);
+        
 
         let i = 0;
         while (i++ < daysInMonth) {
@@ -45,8 +48,8 @@ function renderCalendar(calendarData) {
             dayContainer.innerText = i;
             monthContainer.appendChild(dayContainer);
         }
+        
         calendarContainer.appendChild(monthContainer);
         
-        calendarContainer.appendChild(monthContainerTitle);
     }
 }
