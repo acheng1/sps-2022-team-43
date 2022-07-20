@@ -32,9 +32,8 @@ function renderCalendar(calendarData) {
         monthContainer.classList.add('calendar-month');
         monthContainerTitle.classList.add('calendar-month-title');
         const date = new Date(new Date().getYear(), month, 0);
-        const monthName = date.toLocaleString('default', { month: 'long' });
+        const monthName = date.toLocaleString('en-US', { month: 'short' });
         const daysInMonth = date.getDate();
-
         monthContainerTitle.innerText = monthName;
 
         let i = 0;
@@ -47,5 +46,7 @@ function renderCalendar(calendarData) {
             monthContainer.appendChild(dayContainer);
         }
         calendarContainer.appendChild(monthContainer);
+        
+        calendarContainer.appendChild(monthContainerTitle);
     }
 }
