@@ -5,10 +5,9 @@
     font-size:3vw;
     flex-direction: column;
     background-repeat: no-repeat;
-    background-image: url("/images/impostor9.jpg");
-    background-position: 10% center;
+    background-image: url("/images/impostor4.png");
+    background-position: 15vw 30vw;
     background-size: 40%;
-    margin: 1px;
 }
 
 textarea {
@@ -85,15 +84,15 @@ textarea {
 }
 
 .calendar-day-happy {
-    background-color: rgb(107, 94, 194);
+    background-color: rgb(233, 98, 92);
 }
 
 .calendar-day-average {
-    background-color: rgb(168, 88, 192);
+    background-color: rgb(228, 145, 141);
 }
 
 .calendar-day-bad {
-    background-color: rgb(212, 176, 206);
+    background-color: rgb(241, 192, 190);
 }
 
 .motivational-quote {
