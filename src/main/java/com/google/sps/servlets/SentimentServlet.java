@@ -17,6 +17,8 @@ package com.google.sps.servlets;
 import com.google.cloud.language.v1.Document;
 import com.google.cloud.language.v1.LanguageServiceClient;
 import com.google.cloud.language.v1.Sentiment;
+import com.google.gson.Gson;
+
 import java.io.IOException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -24,11 +26,13 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /** Handles the sentiment score on submitted text */
-@WebServlet("/sentiment")
+@WebServlet("/sentiment-analysis")
 public class SentimentServlet extends HttpServlet {
 
   @Override
-  public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
+  public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    Gson gson = new Gson();
+    
     String message = request.getParameter("text-input");
 
     Document doc =
@@ -50,11 +54,10 @@ public class SentimentServlet extends HttpServlet {
 
     // Output the sentiment score as HTML.
     // A real project would probably store the score alongside the content.
-    response.setContentType("text/html;");
-    response.getWriter().println("<p>Sentiment analysis score: " + score + "</p>");
-    response.getWriter().println(quote);
-    response.getWriter().println("<p><a href=\"/sentiment.html\">Back</a></p>");
-
-    
+    response.setContentType("application/json;");
+    response.setCharacterEncoding("UTF-8");
+    SentimentResponse sr = new SentimentResponse(quote, score);
+    response.getWriter().print(gson.toJson(sr));
+    response.getWriter().flush();
   }
 }

@@ -40,3 +40,52 @@ textarea {
     bottom: 0;
     right: 0;
 }
+
+#calendar-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    height: 30vh;
+    padding: 10px;
+    margin: 10px;
+}
+
+.calendar-month {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 1px;
+    margin: 1px;
+}
+
+.calendar-month-title {
+    font-size: 15px;
+    font-weight: bolder;
+}
+
+.calendar-day {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bolder;
+    font-size: 12px;
+    background-color: lightgray;
+    color: white;
+    width: 30px;
+    height: 15px;
+    opacity: 0.5;
+}
+
+.calendar-day-happy {
+    background-color: green;
+}
+
+.calendar-day-average {
+    background-color: yellow;
+}
+
+.calendar-day-bad {
+    background-color: red;
+}

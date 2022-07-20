@@ -9,16 +9,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100&display=swap" rel="stylesheet">
-    <script src="index.js"></script>
+    <script src="js/index.js"></script>
   </head>
-
+  <body onload="renderCalendar()">
     <div class="content-section">
-        <form action="/sentiment" method="POST">
-            <h1>Reflect on your journey</h1>
-            <h3 style= "color:grey">What have you thought about yourself today?</h3>
-            <textarea name="text-input"  placeholder="What do you feel?"></textarea>
-            <h5>“It doesn't matter how slowly you go, as long as you're moving'”<h5>
-            <input id="api" type="submit"/>
-        </form>
+        <h1>Reflect on your journey</h1>
+        <h3 style= "color:grey">What have you thought about yourself today?</h3>
+        <textarea id="text-input" placeholder="What do you feel?"></textarea>
+        <h5>“It doesn't matter how slowly you go, as long as you're moving'”</h5>
+        <h5 id="motivational-quote"></h5>
+        <button id="api" onclick="sendMessage()">Submit</button>
     </div>
+    <div id="calendar-container"></div>
+  </body>
 </html>

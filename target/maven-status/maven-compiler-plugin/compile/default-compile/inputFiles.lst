@@ -1,4 +1,5 @@
 /home/mdeleongomez/sps-2022-team-43/src/main/java/com/google/sps/servlets/RandomTipServlet.java
 /home/mdeleongomez/sps-2022-team-43/src/main/java/com/google/sps/ServerMain.java
+/home/mdeleongomez/sps-2022-team-43/src/main/java/com/google/sps/servlets/SentimentResponse.java
 /home/mdeleongomez/sps-2022-team-43/src/main/java/com/google/sps/servlets/SentimentServlet.java
 /home/mdeleongomez/sps-2022-team-43/src/main/java/com/google/sps/servlets/FormHandlerServlet.java
