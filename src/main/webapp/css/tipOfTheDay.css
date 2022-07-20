@@ -22,11 +22,10 @@
 }
 
 .center {
-    margin: 0;
-    position: absolute;
-    top: 30%;
-    left: 72%;
-    -ms-transform: translate(-30%, -72%);
-    transform: translate(-30%, -72%);
-  }
-
+  margin: 0;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  -ms-transform: translate(-30%, -50%);
+  transform: translate(-30%, -50%);
+}
