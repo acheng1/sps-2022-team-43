@@ -45,11 +45,11 @@ public class SentimentServlet extends HttpServlet {
     String quote;
 
     if (score < -0.5) {
-        quote = "Bad";
+        quote = "“It doesn't matter how slowly you go, as long as you're moving”";
     } else if (score < 0.5) {
-        quote = "dos tres famosillo";
+        quote = "“A little progress each day adds up to big results”";
     } else {
-        quote = "popularson";
+        quote = "“We are what we repeatedly do. Excellence then is not an act but a habit”";
     }
 
     // Output the sentiment score as HTML.

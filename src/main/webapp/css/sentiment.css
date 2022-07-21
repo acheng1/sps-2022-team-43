@@ -4,12 +4,9 @@
     font-family: 'Inter', sans-serif;
     font-size:3vw;
     flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    width: 100%;
     background-repeat: no-repeat;
-    background-image: url("/images/impostor9.jpg");
-    background-position: 10% center;
+    background-image: url("/images/impostor4.png");
+    background-position: 15vw 30vw;
     background-size: 40%;
 }
 
@@ -20,7 +17,7 @@ textarea {
     opacity: .5;
     font-family: 'Inter', sans-serif;
     text-align: center; 
-    line-height:30px;
+    line-height: 30px;
     height: 250px;
     resize: none;
     width: 400px;
@@ -43,12 +40,15 @@ textarea {
 
 #calendar-container {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 70%;
-    height: 30vh;
-    padding: 10px;
-    margin: 10px;
+    align-content: center;
+    width: 100%;
+    height: 70vh;
+    background-repeat: no-repeat;
+    background-image: url("/images/ombre.jpg");
+    background-position: center;
+    background-size: cover;
+    flex-wrap: wrap;
+    flex-direction: column;
 }
 
 .calendar-month {
@@ -58,11 +58,16 @@ textarea {
     align-items: flex-start;
     padding: 1px;
     margin: 1px;
+    vertical-align: top;
+    align-self: flex-start;
 }
 
 .calendar-month-title {
     font-size: 15px;
     font-weight: bolder;
+    font-family: 'Inter', sans-serif;
+    vertical-align: top;
+    justify-content: center;
 }
 
 .calendar-day {
@@ -73,19 +78,25 @@ textarea {
     font-size: 12px;
     background-color: lightgray;
     color: white;
-    width: 30px;
+    width: 40px;
     height: 15px;
     opacity: 0.5;
 }
 
 .calendar-day-happy {
-    background-color: green;
+    background-color: rgb(233, 98, 92);
 }
 
 .calendar-day-average {
-    background-color: yellow;
+    background-color: rgb(228, 145, 141);
 }
 
 .calendar-day-bad {
-    background-color: red;
+    background-color: rgb(241, 192, 190);
+}
+
+.motivational-quote {
+    font-family: 'Inter', sans-serif;
+    justify-content: center;
+    text-align: center;
 }

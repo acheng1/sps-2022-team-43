@@ -11,15 +11,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100&display=swap" rel="stylesheet">
     <script src="js/index.js"></script>
   </head>
-  <body onload="renderCalendar()">
+  <body onload="renderCalendar()" style="background: linear-gradient(to bottom, rgb(228 145 141 / 19%) 0%, #c2dbdf 100%);">
     <div class="content-section">
         <h1>Reflect on your journey</h1>
         <h3 style= "color:grey">What have you thought about yourself today?</h3>
         <textarea id="text-input" placeholder="What do you feel?"></textarea>
-        <h5>“It doesn't matter how slowly you go, as long as you're moving'”</h5>
         <h5 id="motivational-quote"></h5>
+        <h1>Track your progress</h1>
         <button id="api" onclick="sendMessage()">Submit</button>
     </div>
-    <div id="calendar-container"></div>
+    <div id="calendar-container" ></div>
   </body>
 </html>
