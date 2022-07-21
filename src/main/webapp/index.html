@@ -35,7 +35,7 @@
             <div class="lefthalf d-flex justify-content-center align-items-center">
               <div class="target col-lg-12">
               <h2>Imposter Syndrome</h2>
-                <a href="#" class=" firstlink grey-text modal-trigger" data-target="modal-login">Login</a>
+                <a href="#" id="checking" class=" firstlink grey-text modal-trigger" data-target="modal-login">Login</a>
                 <a href="#" class="secondlink grey-text modal-trigger" id="logout">Logout</a>
                 <a href="#" class="thirdlink grey-text modal-trigger" data-target="modal-signup">Sign up</a>
                 <a href="#" class="fourthlink grey-text modal-trigger" 
@@ -184,7 +184,16 @@
             const modal = document.querySelector('#modal-login');
             M.Modal.getInstance(modal).close();
             loginForm.reset();
-            window.location.href = 'src\main\webapp\tipOfTheDay\tipOfTheDay.html';
+            //window.location.href = 'src\main\webapp\tipOfTheDay\tipOfTheDay.html';
+            //working on this : obj = getElementById("checking");
+            
+          });
+
+          const check = document.getElementById('checking');
+
+          check.addEventListener('click', () => {
+            // 👇️ hide button
+            check.style.display = 'none';
           });
 
           loginForm.addEventListener('click')
@@ -204,7 +213,9 @@
             const modal = document.querySelector('#modal-login');
             M.Modal.getInstance(modal).close();
             loginForm.reset();
+            
           })
+      
 
           const signupform = document.querySelector('#signup-form');
           const signup = document.querySelector('#signupback')
