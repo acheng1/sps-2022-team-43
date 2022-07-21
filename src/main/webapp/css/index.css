@@ -1,4 +1,58 @@
 #img1{
-    height: 100%;
-    width: 100% ;
+    height: 60%;
+    width: 75% ;
+}
+
+.lefthalf, .righthalf{
+    height: 100vh;
+    width: 100%;
+}
+
+.lefthalf{
+    background:#FBEAEB;
+}
+
+.righthalf{
+    background:hsl(230, 59%, 69%);
+}
+
+.target{
+    text-align: center;
+}
+
+.target h2{
+    color:hsl(230, 100%, 72%);
+    font-size: 75px;
+    font-family: sans-serif;
+}
+
+.firstlink{
+    text-decoration: none;
+    font-size: 22px;
+    margin-right: 20px;
+}
+
+.secondlink{
+    text-decoration: none;
+    font-size: 22px;
+    margin-right: 20px;
+}
+
+.thirdlink{
+    text-decoration: none;
+    font-size: 22px;
+    margin-right: 20px;
+}
+
+.fourthlink{
+    text-decoration: none;
+    font-size: 22px;
+}
+
+#signupback{
+    margin-top: 7px;
+}
+
+#gobacklogin{
+    margin-top: 7px;
 }
