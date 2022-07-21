@@ -35,8 +35,8 @@
             <div class="lefthalf d-flex justify-content-center align-items-center">
               <div class="target col-lg-12">
               <h2>Imposter Syndrome</h2>
-                <a href="#" id="checking" class=" firstlink grey-text modal-trigger" data-target="modal-login">Login</a>
-                <a href="#" class="secondlink grey-text modal-trigger" id="logout">Logout</a>
+                <a href="#" id="loginid" class=" firstlink grey-text modal-trigger" data-target="modal-login">Login</a>
+                <a href="#" class="secondlink grey-text modal-trigger" id="logout" style="display:none">Logout</a>
                 <a href="#" class="thirdlink grey-text modal-trigger" data-target="modal-signup">Sign up</a>
                 <a href="#" class="fourthlink grey-text modal-trigger" 
                   id = "accounttarget" data-target="modal-account">Accounts Registered</a>
@@ -165,6 +165,10 @@
           auth.signOut().then(() => {
             console.log('user signed out');
           })
+          const logoutDisplayTwo = document.querySelector('#logout');
+          logoutDisplayTwo.style.display = 'None'
+          const loginDisplayTwo = document.querySelector('#loginid');
+          loginDisplayTwo.style.display = 'inline-block'
         });
         
         var email;
@@ -184,19 +188,12 @@
             const modal = document.querySelector('#modal-login');
             M.Modal.getInstance(modal).close();
             loginForm.reset();
-            window.location.href = 'https://summer22-sps-43.ue.r.appspot.com/tipOfTheDay.html';
-            //working on this : obj = getElementById("checking");
-            
+            const logoutDisplay = document.querySelector('#logout');
+            logoutDisplay.style.display = 'inline-block'
+            const loginDisplay = document.querySelector('#loginid');
+            loginDisplay.style.display = 'None'
+            //window.location.href = 'https://summer22-sps-43.ue.r.appspot.com/tipOfTheDay.html';
           });
-
-          const check = document.getElementById('checking');
-
-          check.addEventListener('click', () => {
-            // 👇️ hide button
-            check.style.display = 'none';
-          });
-
-          loginForm.addEventListener('click')
 
         });
           //Stores details in account details
