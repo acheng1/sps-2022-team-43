@@ -23,28 +23,32 @@
 .target h2{
     color:hsl(230, 100%, 72%);
     font-size: 75px;
-    font-family: sans-serif;
+    font-family:  'Inter', sans-serif;
 }
 
 .firstlink{
+    font-family: 'Inter', sans-serif;;
     text-decoration: none;
     font-size: 22px;
     margin-right: 20px;
 }
 
 .secondlink{
+    font-family: 'Inter', sans-serif;;
     text-decoration: none;
     font-size: 22px;
     margin-right: 20px;
 }
 
 .thirdlink{
+    font-family: 'Inter', sans-serif;;
     text-decoration: none;
     font-size: 22px;
     margin-right: 20px;
 }
 
 .fourthlink{
+    font-family: 'Inter', sans-serif;;
     text-decoration: none;
     font-size: 22px;
 }
