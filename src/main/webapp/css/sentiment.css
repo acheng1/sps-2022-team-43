@@ -7,7 +7,7 @@
     background-repeat: no-repeat;
     background-image: url("/images/impostor4.png");
     background-position: 15vw 30vw;
-    background-size: 40%;
+    background-size: 30%;
 }
 
 textarea {
@@ -43,6 +43,7 @@ textarea {
     align-content: center;
     width: 100%;
     height: 70vh;
+
     flex-wrap: wrap;
     flex-direction: column;
 }

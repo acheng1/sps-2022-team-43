@@ -1,3 +1,62 @@
 #img1{
-    width: 100% ;
+    height: 100%;
+    width: 100%;
+}
+
+.lefthalf, .righthalf{
+    height: 100vh;
+    width: 100%;
+}
+
+.lefthalf{
+    background:#FBEAEB;
+}
+
+.righthalf{
+    background:hsl(230, 59%, 69%);
+}
+
+.target{
+    text-align: center;
+}
+
+.target h2{
+    color:hsl(230, 100%, 72%);
+    font-size: 75px;
+    font-family:  'Inter', sans-serif;
+}
+
+.firstlink{
+    font-family: 'Inter', sans-serif;;
+    text-decoration: none;
+    font-size: 22px;
+    margin-right: 20px;
+}
+
+.secondlink{
+    font-family: 'Inter', sans-serif;;
+    text-decoration: none;
+    font-size: 22px;
+    margin-right: 20px;
+}
+
+.thirdlink{
+    font-family: 'Inter', sans-serif;;
+    text-decoration: none;
+    font-size: 22px;
+    margin-right: 20px;
+}
+
+.fourthlink{
+    font-family: 'Inter', sans-serif;;
+    text-decoration: none;
+    font-size: 22px;
+}
+
+#signupback{
+    margin-top: 7px;
+}
+
+#gobacklogin{
+    margin-top: 7px;
 }

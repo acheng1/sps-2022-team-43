@@ -9,7 +9,7 @@
     <!-- Quick test -->
     <meta charset="UTF-8">
     <title>Impostor Syndrome App</title>
-    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="/src/main/webapp/css/index.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,22 +29,18 @@
     </script>
   </head>
 
-  <body style="background-color:#4ca2ca;">
-        <div class="row">
-          <div
-            class="row align-items-center"
-            style="min-height: 100vh">
-            <!-- Alligns the rows to the center of the viewable screen -->
-                
-            <div class="col-lg-6 text-center" style="background-color:aliceblue;" >
-                <h2>Imposter Syndrome</h2>
-                
-                <a href="#" class="grey-text modal-trigger" data-target="modal-login">Login</a>
-                <a href="#" class="grey-text modal-trigger" id="logout">Logout</a>
-                <a href="#" class="grey-text modal-trigger" data-target="modal-signup">Sign up</a>
-                <a href="#" class="grey-text modal-trigger" 
+  <body>
+      <div class="row g-0">
+          <div class="col-lg-6 no-gutters">
+            <div class="lefthalf d-flex justify-content-center align-items-center">
+              <div class="target col-lg-12">
+              <h2>Imposter Syndrome</h2>
+                <a href="#" id="loginid" class=" firstlink grey-text modal-trigger" data-target="modal-login">Login</a>
+                <a href="#" class="secondlink grey-text modal-trigger" id="logout" style="display:none">Logout</a>
+                <a href="#" class="thirdlink grey-text modal-trigger" data-target="modal-signup">Sign up</a>
+                <a href="#" class="fourthlink grey-text modal-trigger" 
                   id = "accounttarget" data-target="modal-account">Accounts Registered</a>
-
+            
                     <!-- Registering -->
                 <div id="modal-signup" class="modal">
                   <div class="modal-content">
@@ -98,143 +94,150 @@
                   </div>
                 </div>
 
-                <div id="customNext">
-                  <a href="/tipOfTheDay.html">  
-                      <button id="next">Next</button>  
-                  </a> 
-                </div>
+              </div>
           </div>
-
-            <div class="col-lg-6">
-                <img src="images/login_peace.jpg" class="classPic" alt=”img” id="img1" />
             </div>
-
-          </div>
-        </div>
-
-        <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-app.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-auth.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-firestore.js"></script>
-
-        <script type="module">
-          // Import the functions you need from the SDKs you need
-          import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.0/firebase-app.js";
-          import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.9.0/firebase-analytics.js";
-          // TODO: Add SDKs for Firebase products that you want to use
-          // https://firebase.google.com/docs/web/setup#available-libraries
-        
-          // Your web app's Firebase configuration
-          // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-          const firebaseConfig = {
-            apiKey: "AIzaSyD9z7Jy2Xv9wDu1rRBPKYA-Toge7netXvE",
-            authDomain: "imposter-syndrome-app.firebaseapp.com",
-            projectId: "imposter-syndrome-app",
-            storageBucket: "imposter-syndrome-app.appspot.com",
-            messagingSenderId: "141003081444",
-            appId: "1:141003081444:web:654344cefb998ed1a98ef1",
-            measurementId: "G-RM9VEW0DND"
-          };
-        
-          // Initialize Firebase
-          firebase.initializeApp(firebaseConfig);
-          const auth = firebase.auth();
-          const db = firebase.firestore();
-          
-          db.settings({ timestampsInSnapshots: true });
-
-          // signup
-          const signupForm = document.querySelector('#signup-form');
-          signupForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            
-            // get user info
-            const email = signupForm['signup-email'].value;
-            const password = signupForm['signup-password'].value;
-
-            // sign up the user
-            auth.createUserWithEmailAndPassword(email, password).then(cred => {
-              console.log(cred.user);
-              // close the signup modal & reset form
-              const modal = document.querySelector('#modal-signup');
-              M.Modal.getInstance(modal).close();
-              signupForm.reset();
-            });
-          });
-          
-          // logout
-          const logout = document.querySelector('#logout');
-          console.log(logout)
-          logout.addEventListener('click', (e) => {
-            e.preventDefault();
-            auth.signOut().then(() => {
-              console.log('user signed out');
-            })
-          });
-          
-          var email;
-          // login
-          const loginForm = document.querySelector('#login-form');
-          loginForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            
-            // get user info
-            email = loginForm['login-email'].value;
-            const password = loginForm['login-password'].value;
-
-            // log the user in
-            auth.signInWithEmailAndPassword(email, password).then((cred) => {
-              console.log("signed in")
-              // close the signup modal & reset form
-              const modal = document.querySelector('#modal-login');
-              M.Modal.getInstance(modal).close();
-              loginForm.reset();
-              window.location.href = 'src\main\webapp\tipOfTheDay\tipOfTheDay.html';
-            });
-
-            loginForm.addEventListener('click')
-
-          });
-            //Stores details in account details
-            const accounttarget = document.querySelector('#accounttarget');
-            const accountdetails = document.querySelector(".account-details")
-            accounttarget.addEventListener('click',(e) => {
-              e.preventDefault();
-              accountdetails.innerHTML += "<h3>" + email + "</h3>"
-            })
-            
-            const loginback = document.querySelector('#gobacklogin')
-            loginback.addEventListener('click', (e) => {
-              e.preventDefault();
-              const modal = document.querySelector('#modal-login');
-              M.Modal.getInstance(modal).close();
-              loginForm.reset();
-            })
-
-            const signupform = document.querySelector('#signup-form');
-            const signup = document.querySelector('#signupback')
-            signup.addEventListener('click', (e) => {
-              e.preventDefault();
-              const modal = document.querySelector('#modal-signup');
-              M.Modal.getInstance(modal).close();
-              signupform.reset();
-            })
-
-            const accountinfo = document.querySelector('#modal-account')
-            const accountback = document.querySelector('#accountback')
-            accountback.addEventListener('click', (e) => {
-              e.preventDefault();
-              const modal = document.querySelector('#modal-account');
-              M.Modal.getInstance(modal).close();
-              accountdetails.innerHTML = ""
-            })
-
-            
-            
-        </script>
-
-        <!-- Compiled and minified JavaScript -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-        <script src="js/index.js"></script> <!-- Setting it up scripts -->
     
+          <div class="col-lg-6 no-gutters">
+            <div class="target2 col-lg-12">
+              <div class="righthalf d-flex justify-content-center align-items-center">
+                <img src="images/login_peace.jpg" class="classPic" alt=”img” id="img1" />
+              </div>
+
+            </div>
+          </div>
+      </div>
+
+      <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-app.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-auth.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-firestore.js"></script>
+
+      <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.0/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.9.0/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+          apiKey: "AIzaSyD9z7Jy2Xv9wDu1rRBPKYA-Toge7netXvE",
+          authDomain: "imposter-syndrome-app.firebaseapp.com",
+          projectId: "imposter-syndrome-app",
+          storageBucket: "imposter-syndrome-app.appspot.com",
+          messagingSenderId: "141003081444",
+          appId: "1:141003081444:web:654344cefb998ed1a98ef1",
+          measurementId: "G-RM9VEW0DND"
+        };
+      
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const auth = firebase.auth();
+        const db = firebase.firestore();
+        
+        db.settings({ timestampsInSnapshots: true });
+
+        // signup
+        const signupForm = document.querySelector('#signup-form');
+        signupForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+          
+          // get user info
+          const email = signupForm['signup-email'].value;
+          const password = signupForm['signup-password'].value;
+
+          // sign up the user
+          auth.createUserWithEmailAndPassword(email, password).then(cred => {
+            console.log(cred.user);
+            // close the signup modal & reset form
+            const modal = document.querySelector('#modal-signup');
+            M.Modal.getInstance(modal).close();
+            signupForm.reset();
+          });
+        });
+        
+        // logout
+        const logout = document.querySelector('#logout');
+        console.log(logout)
+        logout.addEventListener('click', (e) => {
+          e.preventDefault();
+          auth.signOut().then(() => {
+            console.log('user signed out');
+          })
+          const logoutDisplayTwo = document.querySelector('#logout');
+          logoutDisplayTwo.style.display = 'None'
+          const loginDisplayTwo = document.querySelector('#loginid');
+          loginDisplayTwo.style.display = 'inline-block'
+        });
+        
+        var email;
+        // login
+        const loginForm = document.querySelector('#login-form');
+        loginForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+          
+          // get user info
+          email = loginForm['login-email'].value;
+          const password = loginForm['login-password'].value;
+
+          // log the user in
+          auth.signInWithEmailAndPassword(email, password).then((cred) => {
+            console.log("signed in")
+            // close the signup modal & reset form
+            const modal = document.querySelector('#modal-login');
+            M.Modal.getInstance(modal).close();
+            loginForm.reset();
+            const logoutDisplay = document.querySelector('#logout');
+            logoutDisplay.style.display = 'inline-block'
+            const loginDisplay = document.querySelector('#loginid');
+            loginDisplay.style.display = 'None'
+            window.location.href = 'https://summer22-sps-43.ue.r.appspot.com/tipOfTheDay.html';
+          });
+
+        });
+          //Stores details in account details
+          const accounttarget = document.querySelector('#accounttarget');
+          const accountdetails = document.querySelector(".account-details")
+          accounttarget.addEventListener('click',(e) => {
+            e.preventDefault();
+            accountdetails.innerHTML += "<h3>" + email + "</h3>"
+          })
+          
+          const loginback = document.querySelector('#gobacklogin')
+          loginback.addEventListener('click', (e) => {
+            e.preventDefault();
+            const modal = document.querySelector('#modal-login');
+            M.Modal.getInstance(modal).close();
+            loginForm.reset();
+            
+          })
+      
+
+          const signupform = document.querySelector('#signup-form');
+          const signup = document.querySelector('#signupback')
+          signup.addEventListener('click', (e) => {
+            e.preventDefault();
+            const modal = document.querySelector('#modal-signup');
+            M.Modal.getInstance(modal).close();
+            signupform.reset();
+          })
+
+          const accountinfo = document.querySelector('#modal-account')
+          const accountback = document.querySelector('#accountback')
+          accountback.addEventListener('click', (e) => {
+            e.preventDefault();
+            const modal = document.querySelector('#modal-account');
+            M.Modal.getInstance(modal).close();
+            accountdetails.innerHTML = ""
+          })
+
+      </script>
+
+      <!-- Compiled and minified JavaScript -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+      <script src="js/index.js"></script> <!-- Setting it up scripts -->
+  
   </body>
 </html>
+
