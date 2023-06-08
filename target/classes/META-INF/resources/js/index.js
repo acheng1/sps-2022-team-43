@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 async function sendMessage() {
+        
     const message = document.getElementById('text-input').value;
     const payload = await fetch(`/sentiment-analysis?text-input=${message}`);
     const { quote, score } = await payload.json();
